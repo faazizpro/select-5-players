@@ -20,3 +20,20 @@ for (const btn of allBtn){
 
 }
 
+document.getElementById('calculate-btn').addEventListener('click', function(){
+    const totalPlayer = liArray.length;
+    
+    const inputValue = document.getElementById('input-field');
+    const inputValueString = inputValue.value;
+    const previousInputAmount = parseFloat(inputValueString);
+
+    const playerExpenses = totalPlayer * previousInputAmount;
+
+    const previousTotalExpense = document.getElementById('total-expense');
+
+    // We have got total player expenses
+    previousTotalExpense.innerText = playerExpenses;
+
+
+    
+})
