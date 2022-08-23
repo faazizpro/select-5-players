@@ -37,3 +37,27 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 
     
 })
+
+document.getElementById('final-total').addEventListener('click', function(){
+    const previousTotalExpense = document.getElementById('total-expense');
+
+    const previousTotalExpenseInnerText = previousTotalExpense.innerText;
+    const previousTotalExpenseAmount = parseFloat(previousTotalExpenseInnerText);
+
+
+
+    const managerCost = document.getElementById('manager-cost');
+    const managerCostString = managerCost.value;
+    const previousManagerCost = parseFloat(managerCostString);
+    
+
+    const coachCost = document.getElementById('coach-cost');
+    const coachCostString = coachCost.value;
+    const previousCoachCost = parseFloat(coachCostString);
+
+    const allCost = previousCoachCost + previousManagerCost + previousTotalExpenseAmount;
+
+    const finalExpenses = document.getElementById('final-expense')
+
+    finalExpenses.innerText = allCost;
+})
